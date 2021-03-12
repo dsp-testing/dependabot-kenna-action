@@ -1,0 +1,26 @@
+# action.yml
+name: 'Dependabot Action - Kenna'
+description: 'Dependabot Action to push results into Kenna'
+author: GeekMasher
+
+inputs:
+  endpoint:
+    description: 'Kenna Endpoint'   
+    required: true
+  kenna_token:
+    description: 'Kenna Access Token'
+    required: true
+  github_token:
+    description: 'GitHub Access Token'
+  connector:
+    description: 'Kenna Connector ID'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - -e ${{ inputs.endpoint }}
+    - -k ${{ inputs.kenna_token }}
+    - -t ${{ inputs.github_token }}
+    - -c ${{ inputs.connector }}
