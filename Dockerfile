@@ -9,4 +9,4 @@ COPY requirements.txt requirements.txt
 
 RUN pip install -r requirements.txt
 
-ENTRYPOINT [ "python3", "-m", "ghas_kenna" ]
+ENTRYPOINT [ "python3", "-m", "dependabot" ]
