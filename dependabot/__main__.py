@@ -1,7 +1,11 @@
 import os
+import sys
 import json
 import logging
 import argparse
+
+# HACK: Docker
+sys.path.append('/app')
 
 from dependabot.vulnerability import Vulnerability
 from dependabot.kenna import Kenna
