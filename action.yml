@@ -10,8 +10,6 @@ inputs:
   kenna_token:
     description: 'Kenna Access Token'
     required: true
-  github_token:
-    description: 'GitHub Access Token'
   connector:
     description: 'Kenna Connector ID'
     required: true
@@ -22,5 +20,4 @@ runs:
   args:
     - -e ${{ inputs.endpoint }}
     - -k ${{ inputs.kenna_token }}
-    - -t ${{ inputs.github_token }}
     - -c ${{ inputs.connector }}
